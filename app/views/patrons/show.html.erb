@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Firstname:</b>
+  <%= @patron.firstname %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%= @patron.lastname %>
+</p>
+
+<%= link_to 'Back to Checkouts', checkouts_path %>
+<%= link_to 'Edit', edit_patron_path(@patron) %> |
+<%= link_to 'Back', patrons_path %>

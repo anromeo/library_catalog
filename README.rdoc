@@ -1,0 +1,2 @@
+<h1>Simple Library Catalog</h1>
+<p>This was a simple library title and patron system that I created in order to learn how to use has_many :through.</p>

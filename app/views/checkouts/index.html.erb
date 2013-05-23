@@ -1,0 +1,28 @@
+<h1>Listing checkouts</h1>
+<%= link_to "Add a New Patron", new_patron_path %><br />
+<%= link_to "Add a New Book", new_book_path %><br />
+<%= link_to "Checkout Book", new_checkout_path %>
+
+<table>
+  <tr>
+    <td></td>
+    <td><b>DUE DATE</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+<% @checkouts.each do |checkout| %>
+  <tr>
+    <td><% patron = Patron.find(checkout.patron_id).firstname %>
+        <% book = Book.find(checkout.book_id).title %>
+        <%= patron + " checked out: " + book %></td>
+    <td>
+        <%= checkout.duedate.to_formatted_s(:long) %></td>
+    <td><%= link_to 'Show', checkout %></td>
+    <td><%= link_to 'Edit', edit_checkout_path(checkout) %></td>
+    <td><%= link_to 'Destroy', checkout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

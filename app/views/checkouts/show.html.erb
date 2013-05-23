@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @checkout.patron.firstname %> checked out: <%= @checkout.book.title %>
+</p>
+
+<p>
+ 	It is due
+  <%= @checkout.duedate %>
+</p>
+
+<%= link_to 'Back to Checkouts', checkouts_path %>
+<%= link_to 'Edit', edit_checkout_path(@checkout) %> |
+<%= link_to 'Back', checkouts_path %>
