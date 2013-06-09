@@ -1,2 +1,3 @@
-<h1>Simple Library Catalog</h1>
-<p>This was a simple library title and patron system that I created in order to learn how to use has_many :through.  I created a books and patrons table and allowed patrons to check out different books using a new model called checkouts.</p>
+==Simple Library Catalog
+
+This was a simple library title and patron system that I created in order to learn how to use has_many :through.  I created a books and patrons table and allowed patrons to check out different books using a new model called checkouts.
